@@ -1,26 +1,50 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
-const helpers = require('./helpers');
 const commonConfig = require('./webpack.common');
 
 module.exports = merge(commonConfig, {
-  mode: 'production',
+  devtool: 'eval-source-map',
 
-  output: {
-    filename: 'js/[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
+  mode: 'development',
+
+  entry: {
+    'app': [
+      'webpack-hot-middleware/client?reload=true'
+    ]
   },
 
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-        screw_ie8: true
+  module: {
+    rules: [
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
       },
-      output: {
-        comments: false
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       }
-    })
-  ]
+    ],
+  },
+
+  output: {
+    filename: 'js/[name].js',
+    chunkFilename: '[id].chunk.js'
+  },
+
+  devServer: {
+    contentBase: './client/public',
+    historyApiFallback: true,
+    stats: 'minimal' // none (or false), errors-only, minimal, normal (or true) and verbose
+  }
 });
