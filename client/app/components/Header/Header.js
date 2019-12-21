@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "../Login/Login";
-import SignUp from "../SignUp/Signup";
 import Profile from "../Profile/Profile";
 import Redirect from "../Redirect/Redirect";
 
