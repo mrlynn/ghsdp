@@ -4,17 +4,20 @@ import compass from "./compass.png";
 import student from "./student.png";
 import cloud from "./cloud.png";
 import GitHubLogin from "../GitHubLogin/GitHubLogin";
+import Pfaq from "../Pfaq/Pfaq";
 
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/ButtonToolbar";
 import ButtonToolbar from "react-bootstrap/Button";
+import "./Home.css";
 
 const onSuccess = response => {
   console.log("In onSuccess: " + JSON.stringify(response));
 };
+import Header from "../Header/Header";
+
 const onFailure = response => console.error("The error: " + response);
-const redirectUri = "http://localhost:3000/redirect";
-import "./Home.css";
+const redirectUri = "http://localhost:3000/auth/github/callback";
 import "whatwg-fetch";
 
 class Home extends Component {
@@ -39,7 +42,8 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container-fluid">
+        <Header />
+        <div className="container">
           <div className="jumbotron">
             <Image src={logo} fluid />
           </div>
@@ -132,6 +136,9 @@ class Home extends Component {
                   />
                 </ul>
               </div>
+            </div>
+            <div className="row">
+              <Pfaq></Pfaq>
             </div>
           </div>
         </div>

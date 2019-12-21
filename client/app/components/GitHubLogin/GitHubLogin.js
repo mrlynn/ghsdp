@@ -73,7 +73,7 @@ class GitHubLogin extends Component {
     }
 
     return (
-        <ButtonToolbar variant="dark" size="lg">
+        <ButtonToolbar variant="warning" size="lg">
         <Button {...attrs}>{ children || buttonText }</Button>
         </ButtonToolbar>
     )

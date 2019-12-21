@@ -16,7 +16,8 @@ html {
  */
 
 body {
-  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 /* HTML5 display definitions
@@ -39,7 +40,8 @@ main, /* 2 */
 menu,
 nav,
 section,
-summary { /* 1 */
+summary {
+  /* 1 */
   display: block;
 }
 
@@ -94,101 +96,28 @@ a {
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
 * {
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6,label,span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
   margin-top: 40px;
   font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 img {
   padding: 10px;
 }
-.benefitHeader {
-  padding-top: 10px;
-  font-weight: 450;
-  margin-top: 25px;
-  font-family: 'Fira Sans', sans-serif;
-}
 
-.benefit {
-  font-weight: 200;
-  font-size: .75em;
-  font-family: 'Fira Sans', sans-serif;
-  margin-top: 24px;
-}
-
-.signup {
-  font-weight: 200;
-  font-size: .75em;
-  font-family: 'Fira Sans', sans-serif;
-  margin-top: 24px;
-}
-
-body, html, .App, #root, .auth-wrapper {
-  width: 100%;
-  height: 100%;
-  background: #F5F6F7 !important;
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: 'Fira Sans', sans-serif;
-}
-
-.navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-}
-
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-
-.auth-inner {
-  width: 800px;
-  margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  padding: 40px 55px 45px 55px;
-  border-radius: 15px;
-  transition: all .3s;
-}
-
-.auth-wrapper .form-control:focus {
-  border-color: #167bff;
-  box-shadow: none;
-}
-
-.auth-wrapper h3 {
-  text-align: center;
-  margin: 0;
-  line-height: 1;
-  padding-bottom: 20px;
-}
-
-.custom-control-label {
-  font-weight: 400;
-}
-
-.forgot-password,
-.forgot-password a {
-  text-align: right;
-  font-size: 13px;
-  padding-top: 10px;
-  color: #7f7d7d;
-  margin: 0;
-}
-
-.forgot-password a {
-  color: #167bff;
-}
 
 /**
  * Remove the outline on focused links when they are also active or hovered
@@ -372,7 +301,8 @@ optgroup {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -382,7 +312,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
